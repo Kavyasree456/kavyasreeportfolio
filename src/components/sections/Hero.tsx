@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Eye, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import kavyaProfile from '@/assets/kavya-profile.jpg';
 
@@ -62,20 +62,44 @@ const Hero = ({ setActiveSection }: HeroProps) => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 mb-8">
-                <button onClick={handleViewPortfolio} className="btn-modern group">
-                  <span className="relative z-10 flex items-center justify-center">
-                    View Portfolio
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </button>
-                <button onClick={handleContactMe} className="glass-card px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-glass group">
-                  <span className="flex items-center justify-center">
-                    Contact Me
-                    <Mail className="ml-2 h-5 w-5 transition-transform group-hover:rotate-12" />
-                  </span>
-                </button>
-              </div>
+             <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center">
+  {/* View Portfolio */}
+  <button
+    onClick={handleViewPortfolio}
+    className="btn-modern group whitespace-nowrap"
+  >
+    <span className="relative z-10 flex items-center justify-center">
+      View Portfolio
+      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+    </span>
+  </button>
+
+  {/* Contact Me */}
+  <button
+    onClick={handleContactMe}
+    className="btn-modern group whitespace-nowrap"
+  >
+    <span className="relative z-10 flex items-center justify-center">
+      Contact Me
+      <Mail className="ml-2 h-5 w-5 transition-transform group-hover:rotate-12" />
+    </span>
+  </button>
+
+  {/* View Resume */}
+  <a
+    href="/peruboinakavyasreeresume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-modern group whitespace-nowrap"
+  >
+    <span className="relative z-10 flex items-center justify-center">
+      View Resume
+      <Eye className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
+    </span>
+  </a>
+</div>
+
+
 
               {/* Social Links */}
               <div className="flex space-x-4">
